@@ -88,6 +88,9 @@ $('.js-instrument').on('click', function() {
 
 $(".return").on("click", function() {
   var instrument = $(this).data('instrument');
+  var $iframe = $(this).closest('p').siblings('iframe');
+
+  $iframe.attr('src', $iframe.attr('src'));
 
     $(".instr").show();
    $('.box.' + instrument).hide();
