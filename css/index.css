@@ -807,7 +807,7 @@ DRUMS PAGE
  }
 
 .icon::before {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0;
 }
 
@@ -1000,6 +1000,9 @@ MEDIA QUERY - LAPTOP
       font-size: 1.5rem;
     }
 
+.icon::before {
+  font-size: 4rem;
+}
 
   .wrapper_2 {
     margin-bottom: 40px;
