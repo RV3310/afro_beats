@@ -33,7 +33,13 @@ GENERAL STYLING
   border: .25rem solid purple;
   box-shadow:0 3px 10px rgba(0, 0, 50, 0.3), 0 0 40px rgba(20, 0, 130, 0.2) inset;
 
+}
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: indigo;
 }
 
 /**********************
