@@ -47,25 +47,29 @@ $(".goback").click(goBack);
 
 // 3D carousel
 
+// define variables
 var carousel = $(".carousel"),
     currdeg  = 0;
 
-$(".next").on("click", { 
-  kuti: "n" 
-  }, 
-  rotate);
-$(".prev").on("click", { 
-  kuti: "p" 
-  }, 
-  rotate);
+// define click events
+
+// syntax $(selector).on(event=click,child selector=block in carousel,function=rotate())
+
+$(".next").on("click", {kuti: "n"}, rotate);
+$(".prev").on("click", {kuti: "p"}, rotate);
 
 function rotate(e){
+  // if click event is next
   if(e.data.kuti=="n"){
+  // change the degree varible from current posiion but 90deg clockwise 
     currdeg = currdeg - 90;
   }
+  // if click event is previous
   if(e.data.kuti=="p"){
+  //change the degree variable from it's current posiion but 90deg anti-clockwise 
     currdeg = currdeg + 90;
   }
+  // rotate carrousel via variable
   carousel.css({
     "-webkit-transform": "rotateY("+currdeg+"deg)",
     "-moz-transform": "rotateY("+currdeg+"deg)",
@@ -74,38 +78,56 @@ function rotate(e){
   });
 }
 
+/*******************************
+DRUMS PAGE
+*******************************/
 
-// DRUMS PAGE
-
-// click on tab
+// data target instruments to hide/show addition info
 
 $('.js-instrument').on('click', function() {
+  // get datat key fot link that's been clicked on
   var instrument = $(this).data('instrument');
-
+// hide the map and its contents
   $(".instr").hide();
+  // show the hidden box with the corresponding data key
   $('.box.' + instrument).show();
 });
 
 $(".return").on("click", function() {
+  // find the data key for this link
   var instrument = $(this).data('instrument');
+  // find the youtube video playing in this div
   var $iframe = $(this).closest('p').siblings('iframe');
-
+// reset the video to it's original state (i.e. not plying)
   $iframe.attr('src', $iframe.attr('src'));
-
+// show the map and it's contents
     $(".instr").show();
+    // hide the div of corresponding more info data key
    $('.box.' + instrument).hide();
 })
 
-$('.js-artist').on('click', function() {
-  var artist = $(this).data('artist');
+/*************************************
+ARTISTS PAGE
+************************************/
 
+// hide/show carousel
+
+$('.js-artist').on('click', function() {
+  // get datat key fot link that's been clicked on
+  var artist = $(this).data('artist');
+  // hide the buttons, carousel and its contents
   $('.carousel').hide();
   $('.buttons').hide();
+  // show additional info
   $('.moretxt.' + artist).show();
 })
 
 $('.learnlater').on('click', function() {
   var artist = $(this).data('artist');
+  // find the youtube video playing in this div
+  var $iframe = $(this).closest('p').siblings('iframe');
+  // reset the video to it's original state (i.e. not plying)
+  $iframe.attr('src', $iframe.attr('src'));
 
   $('.carousel').show();
   $('.buttons').show();
@@ -118,14 +140,19 @@ $('.learnlater').on('click', function() {
 BEATS
 *************************************/
 
+// target instruments and sounds via keyboard
+
 $(function() {
   $(this).keydown(function(event) {
+    // find the data code when this key is pressed
     var key = $(this).find('.key[data-key='+event.which+']');
-    console.log(key);
+    // find the first audio file with the corresponding data code
     var audio = $(this).find('audio[data-key='+event.which+']')[0];
-    console.log(audio);
+    // toggle animation .playing
     key.toggleClass('playing');
+    // if no audio do nothing
     if (!audio) return;
+    // play audio from the start of thefile
     audio.play();
     audio.currentTime = 0;
   });
@@ -136,83 +163,23 @@ $(this).keyup(function(event) {
 });
 
 
+// target instruments and sounds via click events
+// why doesn't the above format work for click events?
+
+
 $(function() {
   $('.key').click(function(event) {
+    // get the keycode for the link tat's been clicked on
     var key = $(this).data('key');
+    // find the first matching audio sound with the corresponding key code
     var audio = $('.a' + key)[0];
-     console.log(audio);
-     $('.key' + key).toggleClass('playing');
+    // if there is no corresponding audio do nothing
      if (!audio) return;
+     // if there is a correspoding key code play the audio
      audio.play();
+     // play the audio file from the start
      audio.currentTime = 0;
   });
 });
 
 
-// $(function() {
-//   $(".65").click(function(event) {
-//      var audio = $(".a65")[0];
-//      audio.play();
-//      audio.currentTime = 0;
-// })
-// });
-
-// $(function() {
-//   $(".83").click(function(event) {
-//      var audio = $(".a83")[0];
-//      audio.play();
-// });
-// });
-
-// $(function() {
-//   $(".68").on("click", function() {
-//      var x = $(".a68")[0];
-//      x.play();
-// });
-// });
-
-// $(function() {
-//   $(".70").on("click", function() {
-//      var audio = $(".a70")[0];
-//      audio.play();
-// });
-// });
-
-
-// $(function() {
-//   $(".71").on("click", function() {
-//      var audio = $(".a71")[0];
-//      audio.play();
-// });
-// });
-
-
-// $(function() {
-//   $(".72").on("click", function() {
-//      var audio = $(".a72")[0];
-//      audio.play();
-// });
-// });
-
-// $(function() {
-//   $(".74").on("click", function() {
-//      var audio = $(".a74")[0];
-//      audio.play();
-// });
-// });
-
-
-// $(function() {
-//   $(".75").on("click", function() {
-//      var audio = $(".a75")[0];
-//      audio.play();
-// });
-// });
-
-
-// $(function() {
-//   $(".76").on("click", function() {
-//      var audio = $(".a76")[0];
-//      audio.play();
-// });
-// });

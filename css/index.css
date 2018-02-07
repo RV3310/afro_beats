@@ -289,7 +289,7 @@ li > h3 {
 }
 
 /****************************
-HEADER STLING 
+HEADER STYLING 
 ******************************/
 
 header {
@@ -509,7 +509,7 @@ BODY STYLING
 }
 
 /*******************************
-BODY
+INDEX PAGE
 *******************************/
 .images.container {
   padding-right: 50px;
@@ -718,9 +718,12 @@ ARTISTS PAGE
   border-left: 5px solid #cac2b5;
 }
 
-.dbanj img,
-.kidjo img {
+.dbanj img{
   height: 210px;
+}
+
+.kidjo img {
+  height: 200px;
 }
 
 .info {
