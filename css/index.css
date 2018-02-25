@@ -15,16 +15,8 @@ GENERAL STYLING
 .container {
   width: 1000px;
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 80%;
 }
-
-.images.container {
-  margin-left: auto;
-  margin-right: auto;
-  top: 75px;
-  max-width: 300px;
-}
-
 
 .hidden {
   display: none;
@@ -300,6 +292,7 @@ header {
   background-color: white;
   width: 100%;
   border-bottom: 2px groove rgba(0, 0, 8, 0.3);
+  margin: 0 auto;
 }
 
 header .container {
@@ -488,7 +481,7 @@ BODY STYLING
 
 .tagline {
   word-spacing: 0.3rem;
-  margin: 0 auto;
+  margin: 100px auto 0;
   line-height: 0.8;
   font-weight: 900;
   font-size: 1.6rem;
@@ -512,19 +505,18 @@ BODY STYLING
 /*******************************
 INDEX PAGE
 *******************************/
-/*.images.container {
-  padding-right: 50px;
-}*/
 
 .images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*-ms-flex-pack: distribute;
-      justify-content: space-between;*/
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: relative;
-  margin: 50px 0;
-  margin-bottom: 200px;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  width: 1000px;
+  max-width: 75vw;
  }
 
  
@@ -537,10 +529,9 @@ INDEX PAGE
           animation-duration: 2s;
   -webkit-animation-iteration-count: 2;
           animation-iteration-count: 2;
-  text-align: center;
-  -webkit-transform: translateY(-50px);
+   -webkit-transform: translateY(-50px);
       -ms-transform: translateY(-50px);
-          transform: translateY(-50px);
+          transform: translateX(-30%) translateY(-50px) ;
 /*  box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 30, 0.1) inset;
 */}
 
@@ -548,21 +539,18 @@ INDEX PAGE
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
   color: indigo;
-  left: -3%;
 }
 
 .flaticon-xylophone {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   color: #800000;
-  left: 23%;
 }
 
 .flaticon-mbira {
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   color: #734f96;
-  left: 50%;
 }
 
 .flaticon-chimes{
@@ -575,14 +563,13 @@ INDEX PAGE
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   color: #997300;
-  left: 78%;
-
 }
 
 .fp::before {
-  font-size: 60px;
-  margin: 10px;
+  font-size: 50px;
+  margin-left: 0;
 }
+
 
 .front {
   margin-bottom: 130px;
@@ -628,11 +615,14 @@ FOOTER
 
 footer {
   text-align: center;
-  margin: 1rem auto;
+  margin: 120px auto 0;
   font-size: 1rem;
   background-color: indigo;
   color: white;
   padding: 10px;
+  width: 1000px;
+  max-width: 80%
+
 }
 
 /**********************************
@@ -1086,12 +1076,7 @@ kbd {
 Very Small Screens
 ***********************************/
 
-@media  (max-width: 350px) { 
 
-body {
-  overflow-y: scroll; 
-}
-}
 
 /*******************************
 MEDIA QUERY - IPAD
@@ -1101,6 +1086,11 @@ MEDIA QUERY - IPAD
 
   h1 {
   font-size: 3.5rem;
+  }
+
+  .tagline {
+    margin-top: 155px;
+    font-size: 2rem;
   }
 
   .menu {
@@ -1123,12 +1113,11 @@ MEDIA QUERY - IPAD
     max-width: 600px;
   }
 
-.main_cont {
-  margin-top: 40px;
-}
   .intro  p {
   margin: 15px auto 30px;
-}
+  }
+  
+
   .bl {
     bottom: 10%;
     left: 25%;
@@ -1195,9 +1184,8 @@ MEDIA QUERY - LAPTOP
     margin: 1% 20% 4%;
   }
 
-  .container.tagline {
-      margin-top: 15px;
-      font-size: 1.5rem;
+  .tagline {
+      font-size: 2.5rem;
     }
 
   .wrapper_2 {

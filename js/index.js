@@ -13,6 +13,17 @@ $(window).resize(function() {
 } 
 })
 
+$(window).resize(function() { 
+  if ($(window).width() > 600) { 
+    $(".lrgscrtxt").show(); 
+    $(".first").hide();
+  } else { 
+    $(".lrgscrtxt").hide();
+    $(".first").show();
+} 
+})
+
+
 // OVERLAY 
   $(".menu-link").click(function(event) {
     event.preventDefault();
@@ -54,6 +65,9 @@ var carousel = $(".carousel"),
 // define click events
 
 // syntax $(selector).on(event=click,child selector=block in carousel,function=rotate())
+
+$(".carousel").on("swiperight", {kuti: "p"}, rotate);
+$(".carousel").on("swipeleft", {kuti: "n"}, rotate); 
 
 $(".next").on("click", {kuti: "n"}, rotate);
 $(".prev").on("click", {kuti: "p"}, rotate);
