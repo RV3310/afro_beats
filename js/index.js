@@ -68,7 +68,7 @@ var carousel = $(".carousel"),
 
 $(".wrapper").on("swipeleft", function(e) {
   currdeg = currdeg + 90;
-  $(".carousel").css({"transform": "rotateY("+currdeg+"deg)"});
+  $(".carousel").css({"transform": "rotateY("currdeg"deg)"});
 })
 
 $(".wrapper").on("swiperight", function(e) {

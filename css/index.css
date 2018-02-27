@@ -488,6 +488,11 @@ BODY STYLING
   text-align: center;
 }
 
+.tagline.beats {
+    margin: 20px auto 0;
+
+}
+
 .logo {
   display: inline-block;
   margin: 15px 0;
