@@ -1115,6 +1115,21 @@ MEDIA QUERY - IPAD
     height: 100%;
   }
 
+  .menu {
+    top: 2.2rem;
+    right: 4%;
+  }
+
+  .hamburger-bar {
+    height: .3rem;
+  }
+
+  .hamburger-icon {
+    height: 1.5rem;
+    width: 2rem;
+
+  }
+
   .wrapper {
   margin-top: 125px;
   }
