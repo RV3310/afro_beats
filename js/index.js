@@ -66,15 +66,6 @@ var carousel = $(".carousel"),
 
 // syntax $(selector).on(event=click,child selector=block in carousel,function=rotate())
 
-$(".wrapper").on("swipeleft", function(e) {
-  currdeg = currdeg + 90;
-  $(".carousel").css({"transform": "rotateY("currdeg"deg)"});
-})
-
-$(".wrapper").on("swiperight", function(e) {
-    currdeg = currdeg - 90;
-  $(".carousel").css({"transform": "rotateY("+currdeg+"deg)"});
-})
 
 
 $(".next").on("click", {kuti: "n"}, rotate);
