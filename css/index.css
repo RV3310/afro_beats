@@ -142,11 +142,11 @@ ANIMATIONS
 
 @-webkit-keyframes fall {
   0% {
-    top: 0;
     opacity: 0;
+    top: 0;
   }
   20% {
-    top: 50px;
+    top: 70px;
     opacity: 1;
   }
   40% {
@@ -262,7 +262,7 @@ p {
 }
 
 figcaption {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 p {
@@ -492,9 +492,13 @@ BODY STYLING
   text-align: center;
 }
 
-.tagline.beats {
-    margin: 20px auto 0;
+.tagline.index {
+  margin-bottom: 30px;
+}
 
+.tagline.artists,
+.tagline.beats {
+  margin-top: 20px;
 }
 
 .logo {
@@ -669,7 +673,7 @@ ARTISTS PAGE
   display: flex;
   width: 250px;
   height: 400px;
-  margin: 100px auto 125px;
+  margin: 100px auto 30px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
@@ -696,7 +700,7 @@ ARTISTS PAGE
   position: absolute;
   top: 1%;
   width: 250px;
-  height: 400px;
+  height: 350px;
   text-align: center;
   border-radius: .8em 0 0 .8em;
   background: #ecdcc9;
@@ -714,8 +718,8 @@ ARTISTS PAGE
 
 .photo {
   margin-top: 10px;
-  margin-bottom: 10px;
-  max-height: 210px;
+  margin-bottom: 5px;
+  max-height: 180px;
   border-radius: 50%;
   border-bottom: 5px solid #cac2b5;
   border-left: 5px solid #cac2b5;
@@ -730,7 +734,13 @@ ARTISTS PAGE
 }
 
 .info {
+  margin-top: 2px;
+  margin-bottom: 2px;
   padding-left: 0;
+}
+
+.info li {
+  font-size: .9rem;
 }
 
 .kuti {
