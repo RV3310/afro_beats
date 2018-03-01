@@ -510,7 +510,7 @@ BODY STYLING
 }
 
 .tagline.beats {
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 .logo {
@@ -1126,6 +1126,10 @@ MEDIA QUERY - IPAD
     font-size: 2rem;
   }
 
+  .tagline.beats {
+    margin-top: 40px;
+  }
+
   .menu {
   position: absolute;
   top: 2.5rem;
@@ -1258,6 +1262,10 @@ MEDIA QUERY - LAPTOP
 
   .b-icon::before {
   font-size: 5rem;
+}
+
+.tagline.beats {
+  margin-top: 40px;
 }
 
 kbd {
