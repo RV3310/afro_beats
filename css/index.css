@@ -24,8 +24,8 @@ GENERAL STYLING
 
 .active-tab {
   border: .25rem solid purple;
-  -webkit-box-shadow:0 3px 5px rgba(0, 0, 50, 0.6), 0 0 10px rgba(20, 0, 130, 0.2) inset;
-          box-shadow:0 3px 5px rgba(0, 0, 50, 0.6), 0 0 10px rgba(20, 0, 130, 0.5) inset;
+  -webkit-box-shadow:0 3px 4px rgba(0, 0, 50, 0.6), 0 0 5px rgba(20, 0, 130, 0.2) inset;
+          box-shadow:0 3px 4px rgba(0, 0, 50, 0.6), 0 0 5px rgba(20, 0, 130, 0.5) inset;
 
 }
 
@@ -403,7 +403,7 @@ li  {
 
 .main_cont {
   position: relative;
-  top: 100px;
+  top: 70px;
 }
 
 
@@ -500,8 +500,13 @@ BODY STYLING
   margin-bottom: 30px;
 }
 
-.tagline.artists {
+.tagline.artists,
+.tagline.drums {
   margin-top: 10px;
+}
+
+.tagline.drums {
+  margin-top: 5px;
 }
 
 .tagline.beats {
@@ -1158,6 +1163,10 @@ MEDIA QUERY - IPAD
   .intro  p {
   margin: 15px auto 30px;
   }
+
+  .main_cont {
+  top: 100px;
+  }
   
 
   .bl {
@@ -1178,6 +1187,10 @@ MEDIA QUERY - IPAD
 
  .b-icon::before {
   font-size: 3rem;
+ }
+
+ .introbeats {
+  font-size: 2rem;
  }
 
  kbd {
@@ -1233,6 +1246,7 @@ MEDIA QUERY - LAPTOP
   .wrapper_2 {
     margin-bottom: 40px;
   }
+
 
   .container.beats_cont {
     top: 100px;
