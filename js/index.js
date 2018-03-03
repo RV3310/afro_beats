@@ -130,7 +130,8 @@ $('.js-artist').on('click', function() {
   var artist = $(this).data('artist');
   // hide the buttons, carousel and its contents
   $('.carousel').hide();
-  $('.buttons').hide();
+  $('.buttons').css({"visibility": "hidden"});
+  $('.introartists').hide();
   // show additional info
   $('.moretxt.' + artist).show();
 })
@@ -143,7 +144,8 @@ $('.learnlater').on('click', function() {
   $iframe.attr('src', $iframe.attr('src'));
 
   $('.carousel').show();
-  $('.buttons').show();
+  $('.buttons').css({"visibility": "visible"});
+  $('.introartists').show();
   $('.moretxt.' + artist).hide();
   $('video')[0].pause();
 })

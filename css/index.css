@@ -502,7 +502,7 @@ BODY STYLING
 
 .tagline.artists,
 .tagline.drums {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .tagline.drums {
@@ -605,8 +605,7 @@ INDEX PAGE
 
 .intro_in {
   position: relative;
-/*  top: 80px;
-*/}
+ }
 
 .intro p,
 .intro_in p {
@@ -672,6 +671,10 @@ ARTISTS PAGE
   font-weight: 900;
 }
 
+.introartists {
+  text-align: center;
+}
+
 .moretxt {
   color: #6D0029;
 }
@@ -685,7 +688,7 @@ ARTISTS PAGE
   display: flex;
   width: 250px;
   height: 400px;
-  margin: 100px auto 30px;
+  margin: 100px auto 40px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
@@ -773,17 +776,20 @@ ARTISTS PAGE
 }
 
 .moretxt {
-  margin: 50px auto 50px;
+  margin: 80px auto 20px;
   max-width:90%;
-  right: 5%;
+/*  max-height: 450px;
+*/  right: 5%;
   position: absolute;
-  top: 10%;
+  top: 0;
   border-radius: .8em 0 0 .8em;
   background: #ecdcc9;
   border: .1em solid #4d243d;
   -webkit-box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 60, 0.1) inset;
           box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 60, 0.1) inset;
 }
+
+
 
 .moretxt p {
   margin-bottom: 20px;
@@ -812,7 +818,7 @@ ARTISTS PAGE
   -ms-flex-line-pack: end;
       align-content: flex-end;
   text-align: center;
-  margin: 4% 0 4%;
+  margin: 0 0 4%;
 }
 
 .next, 
