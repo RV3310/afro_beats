@@ -89,7 +89,7 @@ ANIMATIONS
 }
 
 
-/*@media (min-width: 600px) {
+@media (min-width: 600px) {
   @-webkit-keyframes shake {
   10%, 90% {
      -webkit-transform: translateX(-30px) translateY(-60px) rotate(5deg);
@@ -137,7 +137,7 @@ ANIMATIONS
 
   }
 }
-}*/
+}
 
 
 @-webkit-keyframes fall {
@@ -494,6 +494,7 @@ BODY STYLING
   font-weight: 900;
   font-size: 1.6rem;
   text-align: center;
+  color: indigo;
 }
 
 .tagline.index {
@@ -777,9 +778,12 @@ ARTISTS PAGE
 
 .moretxt {
   margin: 80px auto 20px;
+  width: 500px;
   max-width:90%;
-/*  max-height: 450px;
-*/  right: 5%;
+  height: 520px;
+  overflow-y: auto;
+  left: 5%;
+  right: 5%;
   position: absolute;
   top: 0;
   border-radius: .8em 0 0 .8em;
@@ -798,10 +802,21 @@ ARTISTS PAGE
 
 }
 
+iframe {
+  width: 300px;
+  max-height: 215px; 
+  border-top: .2rem solid #cac2b5;
+  border-left: .2rem solid #cac2b5;
+  border-bottom: .2rem solid indigo;
+  border-right: .2rem solid indigo;
+  border-radius: 10px;
+
+}
+
 .moretxt iframe {
   display: block;
   margin: 20px auto;
-  max-width: 90%;
+  width: 90%;
 }
 
 .learnlater {
@@ -818,7 +833,7 @@ ARTISTS PAGE
   -ms-flex-line-pack: end;
       align-content: flex-end;
   text-align: center;
-  margin: 0 0 4%;
+  margin: 0 0 6%;
 }
 
 .next, 
@@ -844,6 +859,7 @@ ARTISTS PAGE
 
 }
 
+.moretxt::-webkit-scrollbar-track,
 .block::-webkit-scrollbar-track {
   border-radius: 10px;
   background: #eee;
@@ -851,12 +867,14 @@ ARTISTS PAGE
           box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0,0,0,0.3)
 }
 
+.moretxt::-webkit-scrollbar,
 .block::-webkit-scrollbar {
   width: 5px;
   height: 70px;
   background-color: rgb(172,47,158);
 }
 
+.moretxt::-webkit-scrollbar-thumb,
 .block::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 1px 1px #5C6670;
@@ -963,7 +981,6 @@ DRUMS PAGE
     left: 40%;
     max-width: 40%;
     margin: 0 auto;
-    background-color: white;
 }
 
 
@@ -1017,17 +1034,7 @@ DRUMS PAGE
 .icon::before {
   font-size: 3rem;
   margin: 0;
-}
-
-iframe {
-  max-width: 300px;
-  max-height: 215px; 
-  border-top: .2rem solid #cac2b5;
-  border-left: .2rem solid #cac2b5;
-  border-bottom: .2rem solid indigo;
-  border-right: .2rem solid indigo;
-  border-radius: 10px;
-
+  background-color: white;
 }
 
 
@@ -1199,8 +1206,10 @@ MEDIA QUERY - IPAD
   font-size: 3rem;
  }
 
- .introbeats {
-  font-size: 2rem;
+ .introbeats,
+ .introartists p,
+ .intro p{
+  font-size: 1.92rem;
  }
 
  kbd {
