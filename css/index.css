@@ -1,3 +1,4 @@
+
 /***********************
 COLORS
 ************************/
@@ -371,7 +372,8 @@ li  {
   -webkit-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  box-shadow: 2px 2px 4px rgba(0,50,0,0.6);
+  -webkit-box-shadow: 2px 2px 4px rgba(0,50,0,0.6);
+          box-shadow: 2px 2px 4px rgba(0,50,0,0.6);
 
 }
 
@@ -920,7 +922,7 @@ DRUMS PAGE
   display: block;
   margin: auto;
   padding: 2px;
-  max-width: 100%;
+  max-width: 98.5%;
 }
 
 .instr,
